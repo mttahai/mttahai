@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Iqra Api 💗</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        /* Custom Cursor with Heart */
+        .cursor-heart {
+            position: fixed;
+            pointer-events: none;
+            z-index: 10000;
+            font-size: 28px;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+
+        /* Heart trail on mouse move */
+        .trail-heart {
+            position: fixed;
+            pointer-events: none;
+            font-size: 16px;
+            animation: floatAway 1.5s ease-out forwards;
+            z-index: 9999;
+        }
+
+        @keyframes floatAway {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-80px) scale(0.2);
+            }
+        }
+
+        /* Animated Heart Canvas Background */
+        #heartCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 7em;
+            background: linear-gradient(45deg, #ff6ec4, #7873f5, #ffd700, #ff6ec4);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientFlow 4s ease infinite;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 30px rgba(255, 110, 196, 0.5));
+        }
+
+        @keyframes gradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero .subtitle {
+            font-size: 1.8em;
+            font-weight: 300;
+            max-width: 900px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease;
+        }
+
+        .hero .from {
+            font-size: 1.5em;
+            font-style: italic;
+            margin-top: 30px;
+            color: #ffd700;
+            animation: fadeIn 2.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Section Styling */
+        .section {
+            margin: 100px 0;
+            padding: 60px 30px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4em;
+            text-align: center;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #ff6ec4, #7873f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Special Messages Grid */
+        .messages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .message-card {
+            background: linear-gradient(135deg, rgba(255, 110, 196, 0.1), rgba(120, 115, 245, 0.1));
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .message-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+            animation: rotate 10s linear infinite;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .message-card:hover::before {
+            opacity: 1;
+        }
+
+        .message-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 110, 196, 0.5);
+            box-shadow: 0 20px 60px rgba(255, 110, 196, 0.3);
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .message-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        .message-card p {
+            font-size: 1.1em;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        /* Promise Section - Special */
+        .promise-section {
+            text-align: center;
+            padding: 80px 30px;
+            background: linear-gradient(135deg, rgba(255, 110, 196, 0.15), rgba(120, 115, 245, 0.15));
+            border-radius: 30px;
+            margin: 100px 0;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .promise-section h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5em;
+            margin-bottom: 40px;
+            color: #ffd700;
+        }
+
+        .promise-text {
+            font-size: 1.4em;
+            line-height: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .promise-text strong {
+            color: #ff6ec4;
+            font-weight: 600;
+        }
+
+        /* Photo Slideshow */
+        .photo-slideshow-section {
+            margin: 80px 0;
+            perspective: 1500px;
+        }
+
+        .photo-slideshow {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+            height: 500px;
+            transform-style: preserve-3d;
+        }
+
+        .photo-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0 15px 60px rgba(0, 0, 0, 0.4);
+            transform: translateZ(-200px) rotateY(20deg);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .photo-slide.active {
+            opacity: 1;
+            z-index: 2;
+            transform: translateZ(0) rotateY(0deg) scale(1.05);
+        }
+
+        .photo-slide.prev {
+            opacity: 0.5;
+            transform: translateZ(-100px) translateX(-150px) rotateY(30deg) scale(0.85);
+            z-index: 1;
+        }
+
+        .photo-slide.next {
+            opacity: 0.5;
+            transform: translateZ(-100px) translateX(150px) rotateY(-30deg) scale(0.85);
+            z-index: 1;
+        }
+
+        .photo-slide-content {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(219, 39, 119, 0.1) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            font-size: 1.3em;
+            color: rgba(255, 255, 255, 0.7);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .photo-slide-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .photo-slide-caption {
+            margin-top: 20px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            font-size: 1.3em;
+            font-weight: 600;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .photo-slide-controls {
+            text-align: center;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .photo-slide-controls button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .photo-slide-controls button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+
+        /* Memories Timeline */
+        .timeline {
+            position: relative;
+            padding: 50px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #ff6ec4, #7873f5);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin: 50px 0;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+            margin-right: 0;
+            text-align: left;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: auto;
+            margin-left: 0;
+            text-align: right;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff6ec4, #7873f5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            border: 3px solid #000;
+        }
+
+        /* Birthday Countdown */
+        .countdown {
+            text-align: center;
+            padding: 60px 30px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 30px;
+            margin: 80px 0;
+        }
+
+        .countdown h3 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #ffd700;
+        }
+
+        .countdown-text {
+            font-size: 5em;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff6ec4, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Wishes Form */
+        .wishes-form {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: #fff;
+            font-size: 1.1em;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff6ec4;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff6ec4, #7873f5);
+            border: none;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 1.3em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 110, 196, 0.4);
+        }
+
+        .wishes-display {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .wish-card {
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(120, 115, 245, 0.1), rgba(255, 110, 196, 0.1));
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideUp 0.5s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .wish-card h4 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .wish-card p {
+            font-size: 1.05em;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* Fireworks effect */
+        .firework {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3.5em; }
+            .hero .subtitle { font-size: 1.3em; }
+            .section-title { font-size: 2.5em; }
+            .timeline::before { left: 30px; }
+            .timeline-content { width: calc(100% - 80px); margin-left: 80px !important; text-align: left !important; }
+            .timeline-icon { left: 30px; }
+            .messages-grid { grid-template-columns: 1fr; }
+            .photo-slideshow { height: 400px; }
+            .photo-slide-content { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-heart">💗</div>
+
+    <!-- Heart Canvas Background -->
+    <canvas id="heartCanvas"></canvas>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div style="font-size: 1.5em; margin-bottom: 20px; opacity: 0.8; animation: fadeIn 1s ease;">
+                To The Most Amazing Sister in The World 🌟
+            </div>
+            <h1>Happy Birthday Iqra Api! 🎂✨</h1>
+            <div style="font-size: 2em; margin: 30px 0; color: #ffd700; font-weight: 600;">
+                Celebrating 19 Years of You! 🎉
+            </div>
+            <p class="subtitle">
+                We met in November 2024, and now here we are - celebrating your 19th birthday together as brother and sister! 
+                This is your first birthday since I became your brother, and I want to make it unforgettable! 
+                Though we're miles apart, my heart is right there with you, celebrating the amazing person you are.
+            </p>
+            <p class="from">Your Brother, Taha 💙</p>
+        </div>
+
+        <!-- Birthday Clock -->
+        <div class="countdown">
+            <h3>You've Been Blessing This World For... 🎂</h3>
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px;">
+                <div style="text-align: center;">
+                    <div class="countdown-text" id="years">19</div>
+                    <div style="font-size: 1.2em; margin-top: 10px;">Years</div>
+                </div>
+                <div style="text-align: center;">
+                    <div class="countdown-text" id="days">0</div>
+                    <div style="font-size: 1.2em; margin-top: 10px;">Days</div>
+                </div>
+                <div style="text-align: center;">
+                    <div class="countdown-text" id="hours">0</div>
+                    <div style="font-size: 1.2em; margin-top: 10px;">Hours</div>
+                </div>
+                <div style="text-align: center;">
+                    <div class="countdown-text" id="minutes">0</div>
+                    <div style="font-size: 1.2em; margin-top: 10px;">Minutes</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Messages -->
+        <div class="section">
+            <h2 class="section-title">Messages From My Heart 💌</h2>
+            <div class="messages-grid">
+                <div class="message-card">
+                    <h3>🌟 You're Irreplaceable</h3>
+                    <p>
+                        Api, from the moment we started talking, I knew there was something special about you. 
+                        You have this incredible warmth that makes everyone feel valued and loved. 
+                        Even though we're connected through screens and messages, the bond we share is real and unbreakable.
+                    </p>
+                </div>
+                <div class="message-card">
+                    <h3>💬 Our Conversations</h3>
+                    <p>
+                        Every chat with you is a treasure. Whether we're laughing about something silly, 
+                        sharing our dreams, or just talking about our day - these moments have become the highlights of mine. 
+                        Distance means nothing when someone means everything.
+                    </p>
+                </div>
+                <div class="message-card">
+                    <h3>🎯 Building Memories</h3>
+                    <p>
+                        We may not have photos together yet, but we're building something more precious - 
+                        memories made of words, laughter, and genuine care. Every conversation is a snapshot, 
+                        every shared moment is a memory I'll cherish forever.
+                    </p>
+                </div>
+                <div class="message-card">
+                    <h3>✨ First of Many</h3>
+                    <p>
+                        This is your first birthday as my sister, but it's just the beginning! 
+                        I promise to make every birthday special, every moment count, and to always be there 
+                        celebrating you - today, tomorrow, and for all the years to come.
+                    </p>
+                </div>
+                <div class="message-card">
+                    <h3>🌍 Beyond Borders</h3>
+                    <p>
+                        Geography can't limit what we have. You're not just somewhere far away - 
+                        you're in my thoughts, my prayers, and my heart every single day. 
+                        Our bond transcends distance, and that's what makes it so beautiful.
+                    </p>
+                </div>
+                <div class="message-card">
+                    <h3>💝 What You Mean to Me</h3>
+                    <p>
+                        You've brought joy, laughter, and a sense of belonging into my life. 
+                        Having you as my sister is one of the best things that has happened to me. 
+                        Thank you for being you, for accepting me, and for this incredible bond we share.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promise Section -->
+        <div class="promise-section">
+            <h2>My Unbreakable Promise 🤝</h2>
+            <p class="promise-text">
+                Iqra Api, I want you to know something from the depths of my heart: 
+                <strong>I will NEVER leave you</strong>. No matter what situation comes, no matter what challenges we face, 
+                <strong>I will always be there for you</strong>. 
+                <br><br>
+                If the whole world stands against you, <strong>I'll be the one standing beside you</strong>. 
+                I'll be your support, your defender, your biggest cheerleader. 
+                <br><br>
+                Our bond as brother and sister is sacred to me. <strong>Nothing can break it, nothing can weaken it</strong>. 
+                Through thick and thin, in happiness and hardships, in celebration and struggle - 
+                <strong>you will always have me</strong>.
+                <br><br>
+                This isn't just a birthday wish; this is a lifelong commitment. 
+                <strong>I'm here, I'm staying, and I'm never letting go</strong>. 
+                You have a brother who will move mountains for you! 💪💙
+            </p>
+        </div>
+
+        <!-- Photo Slideshow -->
+        <div class="section photo-slideshow-section">
+            <h2 class="section-title">Moments That Matter 📸</h2>
+            <div class="photo-slideshow">
+                <div class="photo-slide active">
+                    <div class="photo-slide-content">
+                        💬 Every message we share<br>
+                        Building a beautiful story together<br>
+                        Distance is just a number
+                    </div>
+                    <div class="photo-slide-caption">Connected Through Words 💕</div>
+                </div>
+                <div class="photo-slide next">
+                    <div class="photo-slide-content">
+                        🌟 Your smile lights up my day<br>
+                        Even through a screen<br>
+                        Your happiness is my happiness
+                    </div>
+                    <div class="photo-slide-caption">The Joy You Bring ✨</div>
+                </div>
+                <div class="photo-slide">
+                    <div class="photo-slide-content">
+                        💝 Late night conversations<br>
+                        Sharing dreams and hopes<br>
+                        Creating memories in every chat
+                    </div>
+                    <div class="photo-slide-caption">Heart to Heart Talks 💭</div>
+                </div>
+                <div class="photo-slide">
+                    <div class="photo-slide-content">
+                        👫 Not by blood, but by choice<br>
+                        A bond that feels so natural<br>
+                        Forever grateful for you
+                    </div>
+                    <div class="photo-slide-caption">Siblings By Heart 💙</div>
+                </div>
+                <div class="photo-slide prev">
+                    <div class="photo-slide-content">
+                        🎂 Today we celebrate YOU<br>
+                        The incredible person you are<br>
+                        May all your dreams come true
+                    </div>
+                    <div class="photo-slide-caption">Your Special Day 🎉</div>
+                </div>
+            </div>
+            <div class="photo-slide-controls">
+                <button onclick="changePhotoSlide(-1)">← Previous</button>
+                <button onclick="changePhotoSlide(1)">Next →</button>
+            </div>
+        </div>
+
+        <!-- Timeline of Our Journey -->
+        <div class="section">
+            <h2 class="section-title">Our Journey Together 🛤️</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">💬</div>
+                    <div class="timeline-content">
+                        <h3>The Beginning</h3>
+                        <p>Our first conversations - little did we know this was the start of something beautiful. Each message bringing us closer.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">💫</div>
+                    <div class="timeline-content">
+                        <h3>Growing Closer</h3>
+                        <p>From casual chats to deep conversations. We started sharing dreams, fears, and laughter. A friendship blossoming into family.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">👫</div>
+                    <div class="timeline-content">
+                        <h3>Brother & Sister</h3>
+                        <p>The moment when we truly became siblings. Not by blood, but by choice and heart. A bond that feels as natural as breathing.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🎂</div>
+                    <div class="timeline-content">
+                        <h3>First Birthday Together</h3>
+                        <p>Today! Your first birthday as my sister. The first of countless celebrations we'll share. A milestone in our story.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">♾️</div>
+                    <div class="timeline-content">
+                        <h3>Forever & Always</h3>
+                        <p>The future holds endless possibilities, but one thing is certain - we'll face it together. Siblings forever, through everything.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Birthday Wishes from Taha -->
+        <div class="section">
+            <h2 class="section-title">Special Wishes From Your Brother 💝</h2>
+            <div class="wishes-display">
+                <div class="wish-card">
+                    <h4>Taha ✨</h4>
+                    <p>Api, on this special day, I wish you all the happiness in the world! May every dream you've ever dreamed come true, and may life shower you with endless blessings. You deserve nothing but the absolute best! 🎂💖</p>
+                </div>
+                <div class="wish-card">
+                    <h4>Taha ✨</h4>
+                    <p>Happy 19th Birthday Api! May this year bring you success in everything you do, peace in your heart, and joy in every moment. You're not just getting older, you're getting more amazing! Keep shining bright! 🌟✨</p>
+                </div>
+                <div class="wish-card">
+                    <h4>Taha ✨</h4>
+                    <p>To my wonderful sister - may Allah bless you with health, happiness, and prosperity. May your path be filled with light, your heart with contentment, and your life with beautiful moments. You're truly special! 🤲💕</p>
+                </div>
+                <div class="wish-card">
+                    <h4>Taha ✨</h4>
+                    <p>Api, I pray that this birthday marks the beginning of your best year yet! May you achieve everything you're working towards, and may success follow you wherever you go. The world is lucky to have you in it! 🎯💫</p>
+                </div>
+                <div class="wish-card">
+                    <h4>Taha ✨</h4>
+                    <p>Happy Birthday to the most caring, loving, and incredible sister! Thank you for accepting me as your brother. This bond we share is precious to me, and I'm grateful for every conversation, every laugh, every moment. Here's to many more years together! 💙👫</p>
+                </div>
+                <div class="wish-card">
+                    <h4>Taha ✨</h4>
+                    <p>On your special day, I want you to know how much you mean to me. You've brought so much positivity into my life, Api. May your birthday be as wonderful as you are, and may this year bring you closer to all your goals and aspirations! 🎉💝</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Custom cursor with heart
+        const cursorHeart = document.querySelector('.cursor-heart');
+        let mouseX = 0, mouseY = 0;
+        let lastTrailTime = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            cursorHeart.style.left = mouseX + 'px';
+            cursorHeart.style.top = mouseY + 'px';
+
+            // Create heart trail
+            const now = Date.now();
+            if (now - lastTrailTime > 50) {
+                createTrailHeart(mouseX, mouseY);
+                lastTrailTime = now;
+            }
+        });
+
+        function createTrailHeart(x, y) {
+            const heart = document.createElement('div');
+            heart.className = 'trail-heart';
+            heart.textContent = ['💗', '💖', '💕', '💝'][Math.floor(Math.random() * 4)];
+            heart.style.left = x + 'px';
+            heart.style.top = y + 'px';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 1500);
+        }
+
+        // Animated Heart Canvas Background
+        const canvas = document.getElementById('heartCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        const heartPosition = (rad) => {
+            return [
+                Math.pow(Math.sin(rad), 3),
+                -(15 * Math.cos(rad) - 5 * Math.cos(2 * rad) - 2 * Math.cos(3 * rad) - Math.cos(4 * rad))
+            ];
+        };
+
+        const scaleAndTranslate = (pos, sx, sy, dx, dy) => {
+            return [dx + pos[0] * sx, dy + pos[1] * sy];
+        };
+
+        let pointsOrigin = [];
+        for (let i = 0; i < Math.PI * 2; i += 0.1) {
+            pointsOrigin.push(scaleAndTranslate(heartPosition(i), 210, 13, 0, 0));
+        }
+        for (let i = 0; i < Math.PI * 2; i += 0.1) {
+            pointsOrigin.push(scaleAndTranslate(heartPosition(i), 150, 9, 0, 0));
+        }
+        for (let i = 0; i < Math.PI * 2; i += 0.1) {
+            pointsOrigin.push(scaleAndTranslate(heartPosition(i), 90, 5, 0, 0));
+        }
+
+        let particles = [];
+        const heartPointsCount = pointsOrigin.length;
+        const traceCount = 30;
+
+        for (let i = 0; i < heartPointsCount; i++) {
+            const x = Math.random() * canvas.width;
+            const y = Math.random() * canvas.height;
+            particles[i] = {
+                vx: 0,
+                vy: 0,
+                speed: Math.random() + 5,
+                q: Math.floor(Math.random() * heartPointsCount),
+                D: 2 * (i % 2) - 1,
+                force: 0.2 * Math.random() + 0.7,
+                color: `hsla(${Math.random() * 60 + 300}, ${Math.random() * 40 + 60}%, ${Math.random() * 60 + 20}%, 0.3)`,
+                trace: Array(traceCount).fill().map(() => ({x, y}))
+            };
+        }
+
+        let targetPoints = [];
+        let time = 0;
+
+        function pulse(kx, ky) {
+            for (let i = 0; i < pointsOrigin.length; i++) {
+                targetPoints[i] = [
+                    kx * pointsOrigin[i][0] + canvas.width / 2,
+                    ky * pointsOrigin[i][1] + canvas.height / 2
+                ];
+            }
+        }
+
+        function animate() {
+            const n = -Math.cos(time);
+            pulse((1 + n) * 0.5, (1 + n) * 0.5);
+            time += (Math.sin(time) < 0 ? 9 : (n > 0.8) ? 0.2 : 1) * 0.01;
+
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = particles.length - 1; i >= 0; i--) {
+                const p = particles[i];
+                const target = targetPoints[p.q];
+                const dx = p.trace[0].x - target[0];
+                const dy = p.trace[0].y - target[1];
+                const length = Math.sqrt(dx * dx + dy * dy);
+
+                if (length < 10) {
+                    if (Math.random() > 0.95) {
+                        p.q = Math.floor(Math.random() * heartPointsCount);
+                    } else {
+                        if (Math.random() > 0.99) p.D *= -1;
+                        p.q += p.D;
+                        p.q %= heartPointsCount;
+                        if (p.q < 0) p.q += heartPointsCount;
+                    }
+                }
+
+                p.vx += -dx / length * p.speed;
+                p.vy += -dy / length * p.speed;
+                p.trace[0].x += p.vx;
+                p.trace[0].y += p.vy;
+                p.vx *= p.force;
+                p.vy *= p.force;
+
+                for (let k = 0; k < p.trace.length - 1; k++) {
+                    const T = p.trace[k];
+                    const N = p.trace[k + 1];
+                    N.x -= 0.4 * (N.x - T.x);
+                    N.y -= 0.4 * (N.y - T.y);
+                }
+
+                ctx.fillStyle = p.color;
+                for (let k = 0; k < p.trace.length; k++) {
+                    ctx.fillRect(p.trace[k].x, p.trace[k].y, 1, 1);
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Photo Slideshow
+        let currentPhotoSlide = 0;
+        const photoSlides = document.querySelectorAll('.photo-slide');
+
+        function updatePhotoSlides() {
+            photoSlides.forEach((slide, index) => {
+                slide.classList.remove('active', 'prev', 'next');
+                
+                if (index === currentPhotoSlide) {
+                    slide.classList.add('active');
+                } else if (index === (currentPhotoSlide - 1 + photoSlides.length) % photoSlides.length) {
+                    slide.classList.add('prev');
+                } else if (index === (currentPhotoSlide + 1) % photoSlides.length) {
+                    slide.classList.add('next');
+                }
+            });
+        }
+
+        function changePhotoSlide(direction) {
+            currentPhotoSlide = (currentPhotoSlide + direction + photoSlides.length) % photoSlides.length;
+            updatePhotoSlides();
+        }
+
+        // Auto-advance photo slideshow every 4 seconds
+        setInterval(() => changePhotoSlide(1), 4000);
+
+        // Birthday Clock - Live counting since birth
+        function updateBirthdayClock() {
+            const birthDate = new Date('2006-11-22T00:00:00');
+            const now = new Date();
+            
+            const diffMs = now - birthDate;
+            const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            const diffYears = Math.floor(diffDays / 365.25);
+            const remainingDays = Math.floor(diffDays % 365.25);
+            
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            
+            document.getElementById('years').textContent = diffYears;
+            document.getElementById('days').textContent = remainingDays;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+        }
+        
+        updateBirthdayClock();
+        setInterval(updateBirthdayClock, 60000); // Update every minute
+
+        // Fireworks
+        function createFirework(x, y) {
+            const colors = ['#ff6ec4', '#7873f5', '#ffd700', '#00f2fe'];
+            for (let i = 0; i < 30; i++) {
+                const firework = document.createElement('div');
+                firework.className = 'firework';
+                firework.style.left = x + 'px';
+                firework.style.top = y + 'px';
+                firework.style.background = colors[Math.floor(Math.random() * colors.length)];
+                
+                const angle = (Math.PI * 2 * i) / 30;
+                const velocity = 2 + Math.random() * 3;
+                const vx = Math.cos(angle) * velocity;
+                const vy = Math.sin(angle) * velocity;
+                
+                document.body.appendChild(firework);
+                
+                let posX = x, posY = y;
+                const interval = setInterval(() => {
+                    posX += vx;
+                    posY += vy;
+                    firework.style.left = posX + 'px';
+                    firework.style.top = posY + 'px';
+                    firework.style.opacity = parseFloat(firework.style.opacity || 1) - 0.02;
+                    
+                    if (parseFloat(firework.style.opacity) <= 0) {
+                        clearInterval(interval);
+                        firework.remove();
+                    }
+                }, 20);
+            }
+        }
+
+        // Random fireworks
+        setInterval(() => {
+            createFirework(
+                Math.random() * window.innerWidth,
+                Math.random() * window.innerHeight * 0.7
+            );
+        }, 3000);
+    </script>
+</body>
