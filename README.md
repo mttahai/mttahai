@@ -250,16 +250,6 @@ philosophy: "Automate the boring. Build the future."
 
 ---
 
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=mttahai&theme=radical&no-frame=true&margin-w=8&column=4)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
-
----
-
 ## ✍️ Random Dev Quote
 
 <div align="center">
