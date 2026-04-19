@@ -1,4 +1,4 @@
-name: Generate Snake Animation
+name: Generate Pacman Animation
 
 on:
   schedule:
@@ -11,13 +11,12 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: Platane/snk/svg-only@v3
+      - uses: hugopm/pacman-contribution-graph@v1.3.0
         with:
           github_user_name: mttahai
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          outputs: |
-            dist/snake.svg
-            dist/snake-dark.svg?palette=github-dark
+          output_path_light: dist/pacman.svg
+          output_path_dark: dist/pacman-dark.svg
 
       - name: Push to output branch
         uses: peaceiris/actions-gh-pages@v3
@@ -25,4 +24,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: output
           publish_dir: dist
-          force_orphan: true
+          keep_files: true
+          force_orphan: false
