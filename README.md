@@ -239,10 +239,12 @@ philosophy: "Automate the boring. Build the future."
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mttahai/mttahai/output/pacman-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mttahai/mttahai/output/pacman.svg">
-  <img alt="Pacman animation" src="https://raw.githubusercontent.com/mttahai/mttahai/output/pacman-dark.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mttahai/mttahai/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mttahai/mttahai/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/mttahai/mttahai/output/pacman-contribution-graph.svg">
 </picture>
+
+###
 
 </div>
 
