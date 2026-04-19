@@ -16,7 +16,7 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-tahaislam.me-7c3aed?style=for-the-badge&logo=google-chrome&logoColor=white)](https://tahaislam.me)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mtahaislam-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mtahaislam)
-[![Fiverr](https://img.shields.io/badge/Fiverr-Hire%20Me-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white)](https://fiverr.com/tahaislam525)
+[![Fiverr](https://img.shields.io/badge/Fiverr-Hire%20Me-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white)](https://fiverr.com/titechlabs)
 [![TiTechLabs](https://img.shields.io/badge/TiTechLabs-titechlabs.dev-a855f7?style=for-the-badge&logo=rocket&logoColor=white)](https://titechlabs.dev)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/923429115114)
 
@@ -34,7 +34,9 @@ alias    : Taha Islam
 location : Haripur, KPK, Pakistan 🇵🇰
 role     : AI Automation Developer & Web Developer
 brand    : TiTechLabs 🚀
-status   : College Student (Intermediate / DIT - 2nd Year)
+education:
+  - ✅ DIT — Government College of Management Sciences
+  - ✅ Intermediate (FSc/ICS) — GPGC Haripur
 
 currently:
   🔧 Building AI-powered n8n automation workflows
@@ -238,9 +240,9 @@ philosophy: "Automate the boring. Build the future."
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mttahai/mttahai/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mttahai/mttahai/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/mttahai/mttahai/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mttahai/mttahai/output/snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mttahai/mttahai/output/snake.svg">
+  <img alt="Snake animation" src="https://raw.githubusercontent.com/mttahai/mttahai/output/snake.svg">
 </picture>
 
 </div>
@@ -271,8 +273,9 @@ philosophy: "Automate the boring. Build the future."
 
 <div align="center">
 
-| 📍 Location | Haripur, KPK, Pakistan 🇵🇰 |
+| | |
 |---|---|
+| 📍 Location | Haripur, KPK, Pakistan 🇵🇰 |
 | 📧 Email | titechlabs.ai@gmail.com |
 | 💼 Fiverr | [fiverr.com/titechlabs](https://fiverr.com/titechlabs) |
 | 🌐 Portfolio | [tahaislam.me](https://tahaislam.me) |
