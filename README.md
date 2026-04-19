@@ -144,7 +144,6 @@ philosophy: "Automate the boring. Build the future."
 | 🔄 **TiSync** | Google Drive folder copy & organizer | [tisync.titechlabs.dev](https://tisync.titechlabs.dev) |
 | 💬 **TiTechLabs Chat** | Real-time private chat — no account needed | [chat.titechlabs.dev](https://chat.titechlabs.dev) |
 | 🌐 **TiTechHub** | Products, services & tools showcase | [titechhub.online](https://titechhub.online) |
-| ⚙️ **n8n Instance** | Self-hosted automation engine | [n8n.titechlabs.dev](https://n8n.titechlabs.dev) |
 
 ---
 
@@ -235,14 +234,14 @@ philosophy: "Automate the boring. Build the future."
 
 ---
 
-## 🐍 Contribution Snake
+## 👾 Pacman Contribution Graph
 
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mttahai/mttahai/output/snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mttahai/mttahai/output/snake.svg">
-  <img alt="Snake animation" src="https://raw.githubusercontent.com/mttahai/mttahai/output/snake.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mttahai/mttahai/output/pacman-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mttahai/mttahai/output/pacman.svg">
+  <img alt="Pacman animation" src="https://raw.githubusercontent.com/mttahai/mttahai/output/pacman-dark.svg">
 </picture>
 
 </div>
@@ -253,7 +252,7 @@ philosophy: "Automate the boring. Build the future."
 
 <div align="center">
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=mttahai&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=mttahai&theme=radical&no-frame=true&margin-w=8&column=4)](https://github.com/ryo-ma/github-profile-trophy)
 
 </div>
 
@@ -273,13 +272,16 @@ philosophy: "Automate the boring. Build the future."
 
 <div align="center">
 
-| | |
-|---|---|
-| 📍 Location | Haripur, KPK, Pakistan 🇵🇰 |
-| 📧 Email | titechlabs.ai@gmail.com |
-| 💼 Fiverr | [fiverr.com/titechlabs](https://fiverr.com/titechlabs) |
-| 🌐 Portfolio | [tahaislam.me](https://tahaislam.me) |
-| 🏢 TiTechLabs | [titechlabs.dev](https://titechlabs.dev) |
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mtahaislam)
+[![Fiverr](https://img.shields.io/badge/Fiverr-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white)](https://fiverr.com/titechlabs)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com/channel/0029VaH6LJbJJhzSaSQ8ex0h)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:titechlabs.ai@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-7c3aed?style=for-the-badge&logo=google-chrome&logoColor=white)](https://tahaislam.me)
+[![TiTechLabs](https://img.shields.io/badge/TiTechLabs-a855f7?style=for-the-badge&logo=rocket&logoColor=white)](https://titechlabs.dev)
+
+<br/>
+
+📍 **Haripur, KPK, Pakistan** 🇵🇰
 
 </div>
 
